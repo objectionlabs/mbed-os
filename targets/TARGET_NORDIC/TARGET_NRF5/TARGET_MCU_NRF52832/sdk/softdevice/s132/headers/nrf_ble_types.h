@@ -1,27 +1,25 @@
 /* 
- * Copyright (c) 2000 Nordic Semiconductor ASA
+ * Copyright (c) Nordic Semiconductor ASA
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
  * 
- *   1. Redistributions of source code must retain the above copyright notice, this list 
- *      of conditions and the following disclaimer.
- *
- *   2. Redistributions in binary form, except as embedded into a Nordic Semiconductor ASA 
- *      integrated circuit in a product or a software update for such product, must reproduce 
- *      the above copyright notice, this list of conditions and the following disclaimer in 
- *      the documentation and/or other materials provided with the distribution.
- *
- *   3. Neither the name of Nordic Semiconductor ASA nor the names of its contributors may be 
- *      used to endorse or promote products derived from this software without specific prior 
- *      written permission.
- *
- *   4. This software, with or without modification, must only be used with a 
- *      Nordic Semiconductor ASA integrated circuit.
- *
- *   5. Any software provided in binary or object form under this license must not be reverse 
- *      engineered, decompiled, modified and/or disassembled. 
+ *   1. Redistributions of source code must retain the above copyright notice, this
+ *   list of conditions and the following disclaimer.
+ * 
+ *   2. Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ * 
+ *   3. Neither the name of Nordic Semiconductor ASA nor the names of other
+ *   contributors to this software may be used to endorse or promote products
+ *   derived from this software without specific prior written permission.
+ * 
+ *   4. This software must only be used in a processor manufactured by Nordic
+ *   Semiconductor ASA, or in a processor manufactured by a third party that
+ *   is used in combination with a processor manufactured by Nordic Semiconductor.
+ * 
  * 
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -36,7 +34,6 @@
  * 
  */
 
-
 /**
   @addtogroup BLE_COMMON
   @{
@@ -46,8 +43,8 @@
   @brief Common types and macro definitions for the BLE SoftDevice.
  */
 
-#ifndef NRF_BLE_TYPES_H__
-#define NRF_BLE_TYPES_H__
+#ifndef BLE_TYPES_H__
+#define BLE_TYPES_H__
 
 #include <stdint.h>
 
@@ -86,9 +83,9 @@ extern "C" {
 #define BLE_UUID_GAP                                  0x1800 /**< Generic Access Profile. */
 #define BLE_UUID_GAP_CHARACTERISTIC_DEVICE_NAME       0x2A00 /**< Device Name Characteristic. */
 #define BLE_UUID_GAP_CHARACTERISTIC_APPEARANCE        0x2A01 /**< Appearance Characteristic. */
-#define BLE_UUID_GAP_CHARACTERISTIC_PPF               0x2A02 /**< Peripheral Privacy Flag Characteristic. */
 #define BLE_UUID_GAP_CHARACTERISTIC_RECONN_ADDR       0x2A03 /**< Reconnection Address Characteristic. */
 #define BLE_UUID_GAP_CHARACTERISTIC_PPCP              0x2A04 /**< Peripheral Preferred Connection Parameters Characteristic. */
+#define BLE_UUID_GAP_CHARACTERISTIC_CAR               0x2AA6 /**< Central Address Resolution Characteristic. */
 /** @} */
 
 
@@ -184,7 +181,7 @@ extern "C" {
 
 /** @brief 128 bit UUID values. */
 typedef struct
-{
+{ 
   uint8_t uuid128[16]; /**< Little-Endian UUID bytes. */
 } ble_uuid128_t;
 
@@ -200,7 +197,7 @@ typedef struct
 }
 #endif
 
-#endif /* NRF_BLE_TYPES_H__ */
+#endif /* BLE_TYPES_H__ */
 
 /**
   @}
